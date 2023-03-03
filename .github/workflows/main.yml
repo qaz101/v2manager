@@ -33,9 +33,3 @@ jobs:
     - name: 5.编译apk
       run: flutter build apk --target-platform=android-x64 --split-per-abi --obfuscate --split-debug-info=tmp/
   
-    - name: 6.发布至Github-Release
-      uses: ncipollo/release-action@v1
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        body: "自动发布"
-        artifacts: "build/app/outputs/flutter-apk/app-x86_64-release.apk"
